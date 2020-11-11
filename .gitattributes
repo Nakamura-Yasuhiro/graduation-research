@@ -1,0 +1,2 @@
+*.html.erb linguist-language=Ruby
+*.scss linguist-language=Ruby
