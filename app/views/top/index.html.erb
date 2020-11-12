@@ -14,15 +14,66 @@
   <%= render partial: '/template/sidebar' %>
   <!-- -->
 
+
 <div class="enginner">
+  <div class="body_dottedline">
+  <div class="body_">
+                  <div class="header-nav-container">
+                      <nav class="header-nav">
+                          <ul>
+                                <li class="main-menu">                          
+                                  <%= link_to "トップページ","/" %>
+                                </li>
+                                <li class="main-menu">
+                                  <%= link_to "サイトマップ","/sitemap/index" %>                                                                       
+                                </li>
+                                <li class="main-menu">                                              
+                                  <%= link_to "お問い合わせ先", 'contacts/new' %>
+                                </li>
+                                <li class="main-menu">
+                                  <%= link_to "新規登録", 'signup' %>
+                                </li>
+
+                                <li class="main-menu">
+                                  <%= link_to "ログイン", 'login' %>
+                                </li>
+                          </ul>
+                      </nav>
+                  </div>
+  
+              <div class="header-article-sp">
+                  <div class="header-container">
+                      <div class="menu-open-button">
+                          <div class="menu-trigger">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                      </div>
+                      
+                  </div>
   <h1>enginner meets</h1>
 </div>
 
 <div class="enginner-top">
+  <ul class="clearfix">
+    <li><%= link_to "HOME", controller: "top", action: "index" %></li>
+    <li><%= link_to "OUR TEAM", controller: "introduction", action: "index" %></li>
+</ul>
+
+</nav>
   <p>Enginner meets</p>
   <p class="keyword">最もインテリジェントな、SNS</p>
 </div>
-
+                <% if flash[:notice] %>
+                <div class="flash">
+                 <%= flash[:notice] %>
+               </div>
+             <% end %>
+         <ul class="header-nav2">
+          <li><%= link_to("簡単ログイン", "/guest_login") %></li>
+          <li><%= link_to("チャットルーム", "/posts/index") %></li>
+        </ul>
 <ul>
 <% if @current_user %>
         <li>
