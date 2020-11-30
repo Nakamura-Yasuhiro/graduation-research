@@ -34,3 +34,4 @@ Rails.application.config.assets.precompile += %w( normalize.scss )
 
 
 
+Rails.configuration.assets.precompile += %w[serviceworker.js manifest.json]

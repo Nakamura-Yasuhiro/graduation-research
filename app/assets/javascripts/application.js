@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require jquery 
 //= require jquery_ujs 
-//= require jquery
+//= require serviceworker-companion
 $(function () {
     $(".flash:not(:animated)").fadeIn("slow", function () {
       $(this).delay(2000).fadeOut("slow");
@@ -88,4 +88,4 @@ $(function () {
         TopBtn.fadeOut();
       }
     });
-  });
+  });//= require serviceworker-companion
