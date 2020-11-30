@@ -8,9 +8,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link rel="manifest" href="/manifest.json" />
-<meta name="apple-mobile-web-app-capable" content="yes"></head>
+  <% if flash[:notice] %>
+  <%= javascript_include_tag 'flash_window' %>
+<% end %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
 
   <body>
     <%= yield %>
+   <div class="flash-window hidden">
+  <p><%= notice %><span class="flash-window--delete">X</span></p>
+</div>
   </body>
 </html>

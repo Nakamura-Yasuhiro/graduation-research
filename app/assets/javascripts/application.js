@@ -16,6 +16,7 @@
 //= require jquery 
 //= require jquery_ujs 
 //= require serviceworker-companion
+//= stub flash_window
 $(function () {
     $(".flash:not(:animated)").fadeIn("slow", function () {
       $(this).delay(2000).fadeOut("slow");
