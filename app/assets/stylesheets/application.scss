@@ -518,3 +518,43 @@ body {
       }
     }
   }
+
+
+
+
+  .sidebar-left-side{
+    width: 5rem;
+    background-color: #20b2aa;
+    width: 20vh;
+
+  ul{
+    margin: 0;
+  }
+
+  }
+
+
+  .container {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  .main {
+    display: block;
+    width: 100%;
+    margin-right: 20px;
+  }
+  .sidebar {
+    width: 220px;
+    background-color: white;
+  }
+  .sidebar__item {
+    margin-bottom: 20px;
+  }
+  .sidebar__item--fixed {
+    position: sticky;
+    margin-bottom: 0;
+    top: 10px;
+    z-index: 1;
+  }

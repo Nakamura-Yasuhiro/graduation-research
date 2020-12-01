@@ -6,6 +6,7 @@ html, body {
   background-image: url("silver.png");
 }
 
+
 div.body_dottedline {
   height: 100%;
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -198,7 +199,7 @@ div.body_dottedline {
 
 .post-right {
   width: 100%;
-  padding-left: 30px;
+  padding-left: 0;
   text-align: left;
   font-size: 19px;
 }
@@ -210,7 +211,7 @@ div.body_dottedline {
 }
 
 .posts-show-item {
-  padding: 30px;
+  padding: 0;
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
   overflow: hidden;
@@ -269,6 +270,4 @@ div.body_dottedline {
 .back-logo{
     font-size:18px;
 }
-
-
 
