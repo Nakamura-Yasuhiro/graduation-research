@@ -564,5 +564,11 @@ body {
 
     ul{
     margin-top: 12rem;
+    list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+      font-size: 2vh;
     }
   }

@@ -34,7 +34,7 @@ h1{
     padding-top: 3.5vw;
     margin: 0;
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     color: white;
 }
 }
@@ -80,15 +80,6 @@ h1{
   }
 }
 
-
-.items{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  
-  }
-  
   .item{
   box-sizing: border-box;
   border:1px solid #ccc;
@@ -102,9 +93,9 @@ h1{
   flex-wrap:wrap;
   justify-content:center;
   align-items:center;
-  margin-left: 5rem;
-  position: absolute;
-  width: 30%;
+  margin: 0 auto;
+  width: 67%;
+
   }
    
   .item{
