@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 gem 'bcrypt'
 gem 'serviceworker-rails'
+gem 'webpacker'
 # Use CoffeeScript for .coffee assets and views
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
