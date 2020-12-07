@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuetify from "vuetify"; // 追加
 import "vuetify/dist/vuetify.min.css"; // 追加
-import App from "../app.vue";
+import App from "../user.vue";
 
 
 
@@ -17,7 +17,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log(app);
 });
-
-
-
-
