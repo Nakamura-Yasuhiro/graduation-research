@@ -83,7 +83,6 @@
  }
  
  footer {
-   background-image: url("u.jpg");
    width: 100%;
    left: 0px;
    margin: 0px;
@@ -339,7 +338,6 @@
     left: 0px;
     margin: 0px;
     padding: 0px;
-    background-image: url("u.jpg");
     max-width: 100%;
     background-size: 100% auto;
     font-family: serif;
@@ -463,11 +461,12 @@
 body {
     .flash-window  {
       // 窓の形、色、文字の形、色
-      height: 50px;
+      height: 65px;
       padding: 10px;
       color: white;
       background: black;
-      border-radius: 10px;
+      border-radius: 15px;
+      z-index: 999;
 
       // 中のp要素(メッセージ)を上下左右中央揃え
       display: flex;
@@ -510,6 +509,7 @@ body {
       .flash-window  {
         // 大画面の時は窓の横幅は固定
         width: 500px;
+        z-index: 999;
       }
     }
   }
@@ -518,6 +518,7 @@ body {
       .flash-window  {
         // 小画面の時は画面サイズの90%で可変
         width: 90%;
+        z-index: 999;
         p {
           font-size: 4vw;
         }
@@ -567,6 +568,7 @@ body {
     ul{
     margin-top: 12rem;
     list-style: none;
+    text-align: center;
     }
     a{
       text-decoration: none;
@@ -574,3 +576,9 @@ body {
       font-size: 2vh;
     }
   }
+
+
+
+  *, :after, :before {
+    background-repeat: repeat !important;
+}
