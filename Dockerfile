@@ -23,8 +23,9 @@ WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
 # ライブラリの依存関係をインストール
+RUN gem install bundler:2.1.2
 RUN bundle install
-
+RUN yarn install
 # プロジェクト全体をコピー(Gemfile/Gemfile.lockはコピーされない)
 COPY . /myapp
 
