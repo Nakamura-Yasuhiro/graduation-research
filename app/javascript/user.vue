@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .theme--light.v-application {
     background: #fff;
     color: rgba(0,0,0,.87);

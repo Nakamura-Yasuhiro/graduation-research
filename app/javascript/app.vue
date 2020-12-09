@@ -64,9 +64,8 @@
   }
 </script>
 
-<style scoped>
+<style>
 p {
-  font-size: 2em;
   text-align: center;
 }
 .v-application .mt-12 {
