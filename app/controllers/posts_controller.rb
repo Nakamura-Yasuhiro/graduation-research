@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user
   before_action :ensure_url, {only: [:edit, :update, :destroy]}
   def index
-    @posts = Post.page(params[:page]).per(7).order(created_at: :ASC)
+    @posts = Post.page(params[:page])
   end
   
   def show

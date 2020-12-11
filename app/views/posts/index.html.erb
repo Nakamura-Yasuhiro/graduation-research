@@ -15,30 +15,57 @@
   <!-- ヘッダー部分読み込み  -->
   <%= render partial: '/template/header' %>
     <!-- -->
-    <div class="wallpaper">
-    
-        <div class="container">
-          <% @posts.each do |post| %>
-            <div class="posts-index-item">
-              <div class="post-left"> <img src="<%= " /user_images/#{post.user.image_name} " %>"> </div>
-              <div class="post-right">
-                <div class="post-user-name">
-                    
-                  <%= link_to(post.user.name, "/users/#{post.user.id}") %>
-                </div>
-                <%= link_to(post.content, "/posts/#{post.id}",{class:"sentence"}) %>
-              </div>
-              <% end %>
-                <%= paginate @posts %>
-            </div>
+   <div class = "top-a">
+<% @posts.each do |post| %>
+  <!-- 自分のメッセージの場合 -->
+  <% if post.user != @current_user %>
+    <tr class="row justify-content-center">
+      <!-- アイコンを左側に表示する -->
+      <td class="col-2">
+        <div class="post-left"> <img src="<%= " /user_images/#{post.user.image_name} " %>"> </div>
+      </td>
+      <!-- メッセージを右側に表示する -->
+      <td class="col-10">
+        <%= post.user.name %> <br>
+        <!-- 自分用の吹き出しCSSクラスを適用する -->
+        <div class="says">
+          <p><%= link_to(post.content, "/posts/#{post.id}",{class:"sentence"}) %></p>
+          <span><%= post.created_at.to_s(:datetime_jp) %></span>
         </div>
-    </div>
-    </div>
+      </td>
+    </tr>
+
+  <!-- 自分以外のメッセージの場合 -->
+  <% else %>
+    <tr class="row justify-content-center">
+      <!-- メッセージを左側に表示する -->
+      <td class="col-10">
+
+        <!-- 自分以外用の吹き出しCSSクラスを適用する -->
+              <td class="col-2">
+       <div class="post-right"> <img src="<%= " /user_images/#{post.user.image_name} " %>"> </div>
+      </td>
+              <div class="col-11 float-right">
+          <%= post.user.name %> <br>
+        </div>
+        <div class="other-user-says">
+          <p><%= link_to(post.content, "/posts/#{post.id}",{class:"sentence"}) %></p>
+          <span><%= post.created_at.to_s(:datetime_jp) %></span>
+        </div>
+      </td>
+      <!-- アイコンを右側に表示する -->
+
+    </tr>
+  <% end %>
+<% end %>
+<%= paginate @posts %>
+
 
     <%= form_tag("/posts/create") do %>
       <div class="form">
         <div class="form-body"> <textarea name="content"></textarea> <input type="submit" value="投稿"> </div>
       </div>
       <% end %>
+      </div>
 </body>
 </html>
