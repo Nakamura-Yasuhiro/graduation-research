@@ -22,7 +22,7 @@ class PostsController < ApplicationController
       flash[:notice] = "投稿を作成しました"
       redirect_to("/posts/index")
     else
-      render("posts/new")
+      redirect_to("/posts/index")
     end
   end
   
