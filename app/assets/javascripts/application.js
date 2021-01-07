@@ -89,4 +89,4 @@ $(function () {
         TopBtn.fadeOut();
       }
     });
-  });//= require serviceworker-companion
+  });

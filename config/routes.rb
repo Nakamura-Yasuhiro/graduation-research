@@ -26,19 +26,5 @@ Rails.application.routes.draw do
    get 'introduction/index'
   root 'introduction#index'
   
-  get 'name/index'
-  root 'name#index'
-
-  get 'help/index'
-  root 'help#index'
-  
-   get 'service/index'
-  root 'service#index'
-  
-  get 'plan/index'
-  root 'plan#index'
-  
-  get 'movie/index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :videos, only: %i(new create index show destroy)
 end

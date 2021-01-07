@@ -1,0 +1,29 @@
+ <%= render 'template/navbar' %>
+
+<ul class="list-unstyled">
+  <% @videos.each do |video| %>
+  <li class="media">
+    <div class="media-body">
+
+      <%= link_to video_path(video) do %>
+
+        <%= video_tag video.video.to_s, :size => "360x200" %>
+
+      <!-- この行を追加 -->
+      <% end %>
+
+      <div class="media-body">
+      
+        <!-- この行を追加 -->
+        <%= link_to video_path(video) do %>
+          <h5 class="mt-0 mb-1"><%= video.title %></h5>
+
+        <!-- この行を追加 -->
+        <% end %>
+
+      <<%= video.title %></h5>
+      <%= video.body %>
+    </div>
+  </li>
+  <% end %>
+</ul>
