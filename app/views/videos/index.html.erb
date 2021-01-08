@@ -1,5 +1,9 @@
+ <%= javascript_pack_tag 'hello_react' %>
  <%= render 'template/navbar' %>
+ <%= stylesheet_pack_tag 'application' %>
+<%= javascript_pack_tag 'application' %>
 
+<body>
 <ul class="list-unstyled">
   <% @videos.each do |video| %>
   <li class="media">
@@ -27,3 +31,11 @@
   </li>
   <% end %>
 </ul>
+
+<h2>これはRubyです。</h2>
+<hr color="green">
+
+<%= stylesheet_pack_tag 'application' %>
+<%= javascript_pack_tag 'application' %>
+
+</body>

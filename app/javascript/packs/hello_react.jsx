@@ -5,6 +5,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Hello = props => (
   <div>Hello {props.name}!</div>
@@ -18,9 +19,23 @@ Hello.propTypes = {
   name: PropTypes.string
 }
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Hello name="React" />,
     document.body.appendChild(document.createElement('div')),
   )
 })
+
+
+function App() {
+  return (
+    <div>
+      <h2>これはReactです。</h2>
+      <CircularProgress />
+    </div>
+  )
+}
+
+export default App
