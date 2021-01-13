@@ -7,6 +7,8 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'top' %>
   　　<%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'hello_vue' %>
+    <%= stylesheet_pack_tag 'hello_vue' %>
     <%= javascript_pack_tag 'hello_react' %>
 </head>
 
@@ -54,41 +56,83 @@
 <div class="container-">
   <main class="main">
 
-
-<ul class="list-unstyled">
-  <% @videos.each do |video| %>
-  <li class="media">
-    <div class="media-body">
-
-      <%= link_to video_path(video) do %>
-
-        <%= video_tag video.video.to_s, :size => "360x200" %>
-
-      <% end %>
-
-      <div class="media-body">
-      
-        <%= link_to video_path(video) do %>
-          <h5 class="mt-0 mb-1"><%= video.title %></h5>
-        <% end %>
-
-      <<%= video.title %></h5>
-      <%= video.body %>
-    </div>
-  </li>
-  <% end %>
-</ul>
-
-<%= link_to "動画投稿","/videos/new" %>      
-
-
-<h2>これはRubyです。</h2>
-<hr color="green">
-
-<%= stylesheet_pack_tag 'application' %>
-<%= javascript_pack_tag 'application' %>
-
-</body>
+ <thead class="thead-default">
+      <tr>
+        <th>壁紙スタイル</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="bg-change-container">
+          <div>デフォルト</div>
+          <% if current_user.bg_color_id != 1 %>
+            <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 1 } } %>
+          <% else %>
+            <div>適用済み</div>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="bg-change-container">
+          <div>ハワイアン</div>
+          <% if current_user.bg_color_id != 2 %>
+            <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 2 } } %>
+          <% else %>
+            <div>適用済み</div>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="bg-change-container">
+          <div>レトロ</div>
+          <% if current_user.bg_color_id != 3 %>
+            <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 3 } } %>
+          <% else %>
+            <div>適用済み</div>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="bg-change-container">
+          <div>パステル</div>
+          <% if current_user.bg_color_id != 4 %>
+            <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 4 } } %>
+          <% else %>
+            <div>適用済み</div>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="bg-change-container">
+          <div>スイート</div>
+          <% if current_user.bg_color_id != 5 %>
+            <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 5 } } %>
+          <% else %>
+            <div>適用済み</div>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="bg-change-container">
+          <div>ウインター</div>
+          <% if current_user.bg_color_id != 6 %>
+            <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 6 } } %>
+          <% else %>
+            <div>適用済み</div>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="bg-change-container">
+          <div>スプリング</div>
+          <% if current_user.bg_color_id != 7 %>
+            <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 7 } } %>
+          <% else %>
+            <div>適用済み</div>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
 
 
 
@@ -107,7 +151,7 @@
             <li>
            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
             </li>
-             <li><%= link_to "トップ","/" %></li>  
+            <li><%= link_to "トップ","/" %></li> 
             <li font-size:11px;><%= link_to("プロフィール","/users/#{@current_user.id}/edit",{class:"file"}) %></li>
             <li><%= link_to("ログアウト", "/logout", {method: :post}) %></li>          
           <li><%= link_to("チャットルーム", "/posts/index") %></li>

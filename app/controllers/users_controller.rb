@@ -21,6 +21,7 @@ class UsersController < ApplicationController
       image_name: "default_user.jpg",
       password: params[:password],
       comment: params[:comment],
+      bg_color_id: 1,
     )
     if @user.save
       session[:user_id] = @user.id
@@ -91,6 +92,7 @@ class UsersController < ApplicationController
     @user.image_name = "default_user.jpg"
     @user.password = SecureRandom.urlsafe_base64
     @user.comment = "楽しくプログラミングを学びましょう!"
+    @user.bg_color_id = 1
     @user.save if !@user.id 
     session[:user_id] = @user.id
     redirect_to("/")

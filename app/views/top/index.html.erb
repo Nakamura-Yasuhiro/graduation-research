@@ -13,7 +13,7 @@
 
 <body>
 
-<div class="enginner">
+<div class="enginner-bg-<%= current_user.bg_color_id %>">
   <div class="body_dottedline">
   <div class="body_">
                   <div class="header-nav-container">
@@ -106,7 +106,7 @@
 
 
   </main>
-  <div class="sidebar">
+  <div class="sidebar-bg-<%= current_user.bg_color_id %>">
     <div class="sidebar__item">
 
 
@@ -119,10 +119,12 @@
             <li>
            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
             </li>
+             <li><%= link_to "トップ","/" %></li>     
             <li font-size:11px;><%= link_to("プロフィール","/users/#{@current_user.id}/edit",{class:"file"}) %></li>
             <li><%= link_to("ログアウト", "/logout", {method: :post}) %></li>          
           <li><%= link_to("チャットルーム", "/posts/index") %></li>
            <li><%= link_to("動画一覧", "/videos") %></li>
+           <li><%= link_to("設定", "/tasks/configuration") %></li>
              <% else %>
 
             <li><%= link_to("新規登録", "/signup") %></li>

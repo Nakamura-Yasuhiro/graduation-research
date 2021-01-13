@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_07_120118) do
+ActiveRecord::Schema.define(version: 2021_01_12_075752) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_01_07_120118) do
     t.string "image_name"
     t.string "comment"
     t.string "password_digest"
+    t.integer "bg_color_id"
   end
 
   create_table "videos", force: :cascade do |t|

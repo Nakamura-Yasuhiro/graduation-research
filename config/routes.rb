@@ -24,6 +24,13 @@ Rails.application.routes.draw do
   
    get 'introduction/index'
   root 'introduction#index'
+
+  resources :tasks do
+    collection do
+      get :configuration
+      post :configuration_update
+    end
+  end
   
   resources :videos, only: %i(new create index show destroy)
 end
