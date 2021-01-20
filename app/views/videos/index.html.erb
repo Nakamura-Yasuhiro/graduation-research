@@ -19,7 +19,7 @@
                       <nav class="header-nav">
                           <ul>
                                 <li class="main-menu">                          
-                                  <%= link_to "トップページ","/" %>
+                                  <%= link_to "トップページ","/top" %>
                                 </li>
                                 <li class="main-menu">
                                   <%= link_to "サイトマップ","/sitemap/index" %>                                                                       
@@ -107,7 +107,7 @@
             <li>
            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
             </li>
-             <li><%= link_to "トップ","/" %></li>  
+             <li><%= link_to "トップ","/top" %></li>  
             <li font-size:11px;><%= link_to("プロフィール","/users/#{@current_user.id}/edit",{class:"file"}) %></li>
             <li><%= link_to("ログアウト", "/logout", {method: :post}) %></li>          
           <li><%= link_to("チャットルーム", "/posts/index") %></li>

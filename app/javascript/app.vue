@@ -69,7 +69,7 @@ p {
   text-align: center;
 }
 .v-application .mt-12 {
-    margin-top: 70vh!important;
+    margin-top: 86vh!important;
 }
 .theme--light.v-card {
     background-color: #fff;
@@ -78,6 +78,19 @@ p {
 }
 .v-sheet.v-footer:not(.v-sheet--outlined) {
     box-shadow: 0 0 0 0 rgba(0,0,0,.2), 0 0 0 0 rgba(0,0,0,.14), 0 0 0 0 rgba(0,0,0,.12);
-    margin-top: 23rem;
+    margin-top: 15rem;
 }
+
+@media screen and (max-width: 768px) {
+.v-application .mt-12 {
+    margin-top: 63vh!important;
+    margin-left: 10vh!important;
+}
+.v-sheet.v-footer:not(.v-sheet--outlined) {
+    box-shadow: 0 0 0 0 rgba(0,0,0,.2), 0 0 0 0 rgba(0,0,0,.14), 0 0 0 0 rgba(0,0,0,.12);
+    margin-top: 30rem;
+}
+}
+
+
 </style>
