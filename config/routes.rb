@@ -20,10 +20,20 @@ Rails.application.routes.draw do
   
   
   get 'top/index'
-  root 'top#index'
+  
+  
+  get 'home/index'
+  root 'home#index'
   
    get 'introduction/index'
   root 'introduction#index'
+
+  resources :top do
+    collection do
+      get :configuration
+      post :configuration_update
+    end
+  end
 
   resources :tasks do
     collection do

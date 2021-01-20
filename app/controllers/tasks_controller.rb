@@ -10,6 +10,6 @@ class TasksController < ApplicationController
         flash[:warning] = "壁紙を適用できませんでした"
       end
   
-      redirect_to root_path
+      redirect_to("/top")
     end
 end

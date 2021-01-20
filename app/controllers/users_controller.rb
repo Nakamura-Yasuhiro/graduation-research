@@ -64,7 +64,7 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
-      redirect_to("/")
+      redirect_to("/top")
     else
       @error_message = "メールアドレスまたはパスワードが間違っています"
       @email = params[:email]
@@ -95,7 +95,7 @@ class UsersController < ApplicationController
     @user.bg_color_id = 1
     @user.save if !@user.id 
     session[:user_id] = @user.id
-    redirect_to("/")
+    redirect_to("/top")
     flash[:notice] = "ゲストユーザーとしてログインしました"
   end
   

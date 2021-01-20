@@ -97,12 +97,12 @@
 <div class="enginner-down">
   <div class="section_title"><p>enginner meetsを選ぶ理由</p></div>
 </div>
- 
+ <%= react_component("Hello" ) %>
 <div class="document-section">
   <p>常に最先端を行く</p>
 </div>
-
-
+<%= react_component("App") %>
+<%= react_component('HelloMessage', name: 'John') %>
 
 
   </main>
@@ -119,7 +119,7 @@
             <li>
            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
             </li>
-             <li><%= link_to "トップ","/" %></li>     
+             <li><%= link_to "トップ","/top" %></li>     
             <li font-size:11px;><%= link_to("プロフィール","/users/#{@current_user.id}/edit",{class:"file"}) %></li>
             <li><%= link_to("ログアウト", "/logout", {method: :post}) %></li>          
           <li><%= link_to("チャットルーム", "/posts/index") %></li>
