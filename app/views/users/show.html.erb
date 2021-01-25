@@ -17,6 +17,58 @@
     </div>
 
 
+<div id="user">
+<template>
+  <v-card
+    class="mx-auto"
+    max-width="434"
+    tile
+  >
+    <v-img
+      height="100%"
+      src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+    >
+      <v-row
+        align="end"
+        class="fill-height"
+      >
+        <v-col
+          align-self="start"
+          class="pa-0"
+          cols="12"
+        >
+          <v-avatar
+            class="profile"
+            color="grey"
+            size="164"
+            tile
+          >
+            <v-img src="<%= " /user_images/#{@user.image_name} " %>"></v-img>
+          </v-avatar>
+        </v-col>
+        <v-col class="py-0">
+          <v-list-item
+            color="rgba(0, 0, 0, .4)"
+            dark
+          >
+            <v-list-item-content>
+              <v-list-item-title class="title">
+                <%= @user.name %><br>
+                <%= @user.email %>
+              </v-list-item-title>
+              <v-list-item-subtitle>Engineer</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-col>
+      </v-row>
+    </v-img>
+  </v-card>
+</template>
+</div>
+
+
+
+
     <div class="main user-show">
       <div class="container">
         <div class="user"> <img src="<%= " /user_images/#{@user.image_name} " %>">
@@ -45,3 +97,16 @@
     </div>
 </body>
 </html>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#user',
+      vuetify: new Vuetify(),
+    })
+
+
+
+  </script>
