@@ -22,7 +22,10 @@ Rails.application.config.assets.precompile += %w( users.scss )
 Rails.application.config.assets.precompile += %w( users.js )
 Rails.application.config.assets.precompile += %w( flash_window.js )
 Rails.application.config.assets.precompile += %w( videos.js )
+Rails.application.config.assets.precompile += %w( videos.scss )
 Rails.application.config.assets.precompile += %w( normalize.scss )
+Rails.application.config.assets.precompile += %w( home.scss )
+Rails.application.config.assets.precompile += %w( tasks.scss )
 
 
 

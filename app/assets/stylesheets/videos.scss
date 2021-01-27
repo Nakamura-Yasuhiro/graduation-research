@@ -1,8 +1,9 @@
 // Place all the styles related to the videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.media{
-	padding-top: 20px;
+
+.main{
+	margin-top: 1rem;
 }
 
 #nicoscreen{
@@ -18,4 +19,75 @@
 #comment_text{
 	width: 934px;
 	height: 36px;
+}
+
+
+
+.free-section-01 .container,
+.free-section-02 .container {
+  height: 250px;
+  padding-top: 80px;
+  color: #fff;
+}
+
+.free-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-left: 16px;
+}
+
+.free-text {
+  font-size: 24px;
+  padding-left: 16px;
+}
+
+.free-section-01 {
+	background-image: image-url("bg_02.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.free-section-02 {
+	background-image: image-url("bg_03.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .slide-contents-title {
+    font-size: 36px;
+  }
+  
+  .slide-contents-text {
+    font-size: 24px;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  
+  /* ここから追加 */
+  .free-section-01 .container,
+  .free-section-02 .container {
+    padding-top: 100px;
+  }
+  
+  .free-section-01,
+  .free-section-02 {
+    height: 500px;
+  }
+  
+  .free-title {
+    font-size: 30px;
+  }
+  
+  .free-text {
+    font-size: 20px;
+  }
+  /* ここまで追加 */
 }

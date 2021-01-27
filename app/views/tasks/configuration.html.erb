@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'top' %>
+    <%= stylesheet_link_tag    'tasks' %>
   　　<%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag 'hello_react' %>
 </head>
@@ -56,7 +57,9 @@
 
  <thead class="thead-default">
       <tr>
+      <div class="style">
         <th>壁紙スタイル</th>
+        </div>
       </tr>
     </thead>
     <tbody>
@@ -66,7 +69,7 @@
           <% if current_user.bg_color_id != 1 %>
             <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 1 } } %>
           <% else %>
-            <div>適用済み</div>
+            <div class="success">適用済み</div>
           <% end %>
         </td>
       </tr>
@@ -76,7 +79,7 @@
           <% if current_user.bg_color_id != 2 %>
             <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 2 } } %>
           <% else %>
-            <div>適用済み</div>
+            <div class="success">適用済み</div>
           <% end %>
         </td>
       </tr>
@@ -86,7 +89,7 @@
           <% if current_user.bg_color_id != 3 %>
             <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 3 } } %>
           <% else %>
-            <div>適用済み</div>
+            <div class="success">適用済み</div>
           <% end %>
         </td>
       </tr>
@@ -96,7 +99,7 @@
           <% if current_user.bg_color_id != 4 %>
             <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 4 } } %>
           <% else %>
-            <div>適用済み</div>
+            <div class="success">適用済み</div>
           <% end %>
         </td>
       </tr>
@@ -106,7 +109,7 @@
           <% if current_user.bg_color_id != 5 %>
             <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 5 } } %>
           <% else %>
-            <div>適用済み</div>
+            <div class="success">適用済み</div>
           <% end %>
         </td>
       </tr>
@@ -116,7 +119,7 @@
           <% if current_user.bg_color_id != 6 %>
             <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 6 } } %>
           <% else %>
-            <div>適用済み</div>
+            <div class="success">適用済み</div>
           <% end %>
         </td>
       </tr>
@@ -126,7 +129,7 @@
           <% if current_user.bg_color_id != 7 %>
             <%= button_to "適用", { action: "configuration_update" }, { params: { bg_color_id: 7 } } %>
           <% else %>
-            <div>適用済み</div>
+            <div class="success">適用済み</div>
           <% end %>
         </td>
       </tr>

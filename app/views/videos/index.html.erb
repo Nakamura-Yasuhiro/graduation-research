@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'top' %>
+    <%= stylesheet_link_tag    'videos' %>
   　　<%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag 'hello_react' %>
 </head>
@@ -54,6 +55,31 @@
 <div class="container-">
   <main class="main">
 
+  <section class="free-section-01">
+      <div class="container">
+        <div class="free-title">
+          動画の楽しさを簡単に。
+        </div>
+        <div class="free-text">
+          厳選されたから動画から見たい動画が見つかる。<br>
+          最新情報をすぐさまチェック<br>
+          動画イベント情報を配信。
+        </div>
+      </div><!-- container -->
+    </section><!-- free-section-01 -->
+
+    <section class="free-section-02">
+      <div class="container">
+        <div class="free-title">
+          求めていた⁠動画が見⁠つ⁠か⁠る
+        </div>
+        <div class="free-text">
+          多くの動画からあなたの得たい情報を見つけられます。<br>
+        </div>
+      </div><!-- container -->
+    </section><!-- free-section-02 -->
+    <!-- ここまで追加 -->
+
 
 <ul class="list-unstyled">
   <% @videos.each do |video| %>
@@ -84,7 +110,6 @@
 
 <h2>これはRubyです。</h2>
 <hr color="green">
-
 <%= stylesheet_pack_tag 'application' %>
 <%= javascript_pack_tag 'application' %>
 
@@ -131,71 +156,4 @@
 </html>
 
 
-    <script defer crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script defer crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  <script defer crossorigin defer src="//unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
-  <script defer src="js/bundle.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
 
-<script>
-import 'date-fns';
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import DateFnsUtils from '@date-io/date-fns';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
-
-export default function MaterialUIPickers() {
-  // The first commit of Material-UI
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-
-  return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Grid container justify="space-around">
-        <KeyboardDatePicker
-          disableToolbar
-          variant="inline"
-          format="MM/dd/yyyy"
-          margin="normal"
-          id="date-picker-inline"
-          label="Date picker inline"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
-        <KeyboardDatePicker
-          margin="normal"
-          id="date-picker-dialog"
-          label="Date picker dialog"
-          format="MM/dd/yyyy"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
-        <KeyboardTimePicker
-          margin="normal"
-          id="time-picker"
-          label="Time picker"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change time',
-          }}
-        />
-      </Grid>
-    </MuiPickersUtilsProvider>
-  );
-}
-</script>
