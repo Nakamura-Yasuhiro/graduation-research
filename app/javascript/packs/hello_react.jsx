@@ -1,26 +1,26 @@
-// Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
-// like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
-// of the page.
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+const HelloWorld = (props) => {
+  const [name, setName] = useState(props.name);
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+  return (
+    <>
+      <h3>Hello, {name}!</h3>
+      <hr />
+      <form>
+        <label htmlFor="name">
+          Say hello to:
+          <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </label>
+      </form>
+    </>
+  );
+};
 
-Hello.defaultProps = {
-  name: 'David'
-}
+HelloWorld.propTypes = {
+  name: PropTypes.string.isRequired, // this is passed from the Rails view
+};
 
-Hello.propTypes = {
-  name: PropTypes.string
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+// エラー修正
+export default props => <HelloWorld {...props} />;
