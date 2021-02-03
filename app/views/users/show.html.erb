@@ -3,14 +3,58 @@
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yasuhiro's Portfolio</title>
   <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'users' %>
       <%= stylesheet_link_tag    'normalize'%>
         <%= javascript_include_tag 'users.js' %>
             <%= javascript_pack_tag 'user' %>
 </head>
+
 <body>
+
+<div class="enginner-bg-<%= current_user.bg_color_id %>">
+  <div class="body_dottedline">
+  <div class="body_">
+                  <div class="header-nav-container">
+                      <nav class="header-nav">
+                          <ul>
+                                <li class="main-menu">                          
+                                  <%= link_to "トップページ","/" %>
+                                </li>
+                                <li class="main-menu">
+                                  <%= link_to "サイトマップ","/sitemap/index" %>                                                                       
+                                </li>
+                                <li class="main-menu">                                              
+                                  <%= link_to "お問い合わせ先", 'contacts/new' %>
+                                </li>
+                                <li class="main-menu">
+                                  <%= link_to "新規登録", 'signup' %>
+                                </li>
+
+                                <li class="main-menu">
+                                  <%= link_to "ログイン", 'login' %>
+                                </li>
+                          </ul>
+                      </nav>
+                  </div>
+  
+              <div class="header-article-sp">
+                  <div class="header-container">
+                      <div class="menu-open-button">
+                          <div class="menu-trigger">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                      </div>
+                      
+                  </div>
+
+
+<div class="container-">
+  <main class="main">
+    <!-- メインコンテンツ -->
+  
   <div class=show>
     <div class="header-logo">
       <%= link_to("＞BUSINESS WEBSITE", "/top") %>
@@ -21,7 +65,7 @@
 <template>
   <v-card
     class="mx-auto"
-    max-width="644"
+    width="534"
     tile
   >
     <v-img
@@ -95,10 +139,41 @@
           <% end %>
       </div>
     </div>
-</body>
-</html>
 
 
+
+  </main>
+  <div class="sidebar-bg-<%= current_user.bg_color_id %>">
+    <div class="sidebar__item">
+
+
+      <!-- 中身 -->
+    </div>
+    <div class="sidebar__item sidebar__item--fixed">
+
+  <ul>
+    <% if @current_user %>
+            <li>
+           <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            </li>
+             <li><%= link_to "トップ","/top" %></li>     
+            <li font-size:11px;><%= link_to("プロフィール","/users/#{@current_user.id}/edit",{class:"file"}) %></li>
+            <li><%= link_to("ログアウト", "/logout", {method: :post}) %></li>          
+          <li><%= link_to("チャットルーム", "/posts/index") %></li>
+           <li><%= link_to("動画一覧", "/videos") %></li>
+           <li><%= link_to("設定", "/tasks/configuration") %></li>
+             <% else %>
+
+            <li><%= link_to("新規登録", "/signup") %></li>
+            <li><%= link_to("ログイン", "/login") %></li>
+            <li><%= link_to("簡単ログイン", "/guest_login") %></li>
+             <% end %>
+  </ul>
+      <!-- 固定・追従させたいエリア -->
+    </div>
+  </div>
+</div>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script>
@@ -110,3 +185,10 @@
 
 
   </script>
+</body>
+</html>
+
+
+
+
+  

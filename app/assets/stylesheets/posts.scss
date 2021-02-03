@@ -339,3 +339,12 @@ div.body_dottedline {
   max-width: 780px;
     margin: auto !important;
 }
+
+
+.sidebar__item--fixed a {
+  text-decoration: none;
+  color: black;
+  font-size: 2vh;
+  line-height: 1.5;
+  padding: 0;
+}
