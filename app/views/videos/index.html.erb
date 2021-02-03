@@ -105,11 +105,11 @@
   <% end %>
 </ul>
 
-<%= link_to "動画投稿","/videos/new" %>      
+<div class="video-link">
+ <%= link_to "動画投稿","/videos/new", {class: "nav-link"} %>      
+</div>
 
 
-<h2>これはRubyです。</h2>
-<hr color="green">
 <%= stylesheet_pack_tag 'application' %>
 <%= javascript_pack_tag 'application' %>
 
