@@ -1,7 +1,9 @@
 // Place all the styles related to the videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+html{
+  background-color: #f4f4f4 !important;
+}
 .main{
 	margin-top: 1rem;
 }
@@ -128,31 +130,49 @@ height: 3rem;
 .sidebar-bg-1 {
   width: 220px;
   margin-top: -8rem;
-  height: 60rem;
+  height: 150rem;
   background-color: white;
 }
 
 .sidebar-bg-2 {
-  height: 60rem;
+  height: 150rem;
 }
 .sidebar-bg-3 {
-  height: 60rem;
+  height: 150rem;
 }
 
 .sidebar-bg-4 {
-  height: 60rem;
+  height: 150rem;
 }
 
 .sidebar-bg-5 {
-  height: 60rem;
+  height: 150rem;
 }
 
 .sidebar-bg-6 {
-  height: 60rem;
+  height: 150rem;
 }
 
 .sidebar-bg-7 {
-  height: 60rem;
+  height: 150rem;
 }
 
 
+.title1{
+  color: azure !important;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 23px;
+}
+
+
+.video-sentence p{
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.body-sentence {
+  margin-top: -17px;
+}

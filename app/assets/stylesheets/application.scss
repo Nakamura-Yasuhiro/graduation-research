@@ -19,7 +19,6 @@
    font-weight: bold;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   background-image: url("silver.png");
    overscroll-behavior: none;
  }
 
@@ -418,6 +417,7 @@
   font-weight: 550;
   margin: 0px 0 20px;
   font-size: 35px;
+  text-align: center;
   color: #58aff1;
   text-shadow: 1px 1px 1px #000000;
 }

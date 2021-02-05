@@ -1,6 +1,13 @@
+html{
+  background-image: linear-gradient(
+    120deg
+    , #a1c4fd 0%, #c2e9fb 100%);
+}
+
 .field{
   color: white;
 }
+
 
 body{
   margin: 0;
@@ -112,4 +119,39 @@ img{
 
 .enginner-bg-1 {
   margin-top: 0;
+}
+
+
+#user{
+  margin-top: 10px;
+}
+
+
+.sidebar-bg-1 {
+  width: 220px;
+  height: 150rem;
+  background-color: white;
+}
+
+.sidebar-bg-2 {
+  height: 150rem;
+}
+.sidebar-bg-3 {
+  height: 150rem;
+}
+
+.sidebar-bg-4 {
+  height: 150rem;
+}
+
+.sidebar-bg-5 {
+  height: 150rem;
+}
+
+.sidebar-bg-6 {
+  height: 150rem;
+}
+
+.sidebar-bg-7 {
+  height: 150rem;
 }
