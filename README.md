@@ -1,10 +1,11 @@
 #　卒業研究
 
 使用技術一覧
-Rails
-Docker
-circleci
+
+Rails<br>
+Docker<br>
+circleci<br>
 Heroku(Dockerコンテナでの運用)
 
-jquery
-Vue.js
+jquery<br>
+Vue.js<br>
