@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.3-stretch-node
+      - image: circleci/ruby:2.6.5-stretch-node
     executor: ruby/default
     steps:
       - checkout
@@ -24,7 +24,9 @@ jobs:
       - run:
           name: Heroku への master のデプロイ
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+           docker login --username=_ --password=$HEROKU_AUTH_TOKEN registry.heroku.com
+           heroku container:push web -a enginner-meets
+           heroku container:release web -a enginner-meets
 
 workflows:
   version: 2.1
@@ -38,3 +40,4 @@ workflows:
           filters:
             branches:
               only: master
+
