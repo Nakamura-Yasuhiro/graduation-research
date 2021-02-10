@@ -27,7 +27,6 @@ jobs:
            docker login --username=_ --password=$HEROKU_AUTH_TOKEN registry.heroku.com
            heroku container:push web -a enginner-meets
            heroku container:release web -a enginner-meets
-
 workflows:
   version: 2.1
   build-deploy:
@@ -40,4 +39,3 @@ workflows:
           filters:
             branches:
               only: master
-
