@@ -225,7 +225,13 @@
  /*-----------------スマホ用-----------------*/
  
  @media only screen and (max-width: 768px) {
-
+  .sidebar__item--fixed a{
+      text-decoration: none;
+      color: black;
+      font-size: 18px !important;
+      font-weight: bold;
+      font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+    }
   .menu-open-button {
     float: right;
   }
@@ -363,6 +369,8 @@
 .sidebar {
   display: none;
 }
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -401,9 +409,10 @@
     width: 100%;
     display: none;
   }
+  }
  
 
-}
+
 
 /*-----------------form-----------------*/
 .form {
@@ -575,11 +584,14 @@ body {
     margin-top: 12rem;
     list-style: none;
     text-align: center;
+    padding: 0;
     }
     a{
       text-decoration: none;
       color: black;
-      font-size: 2vh;
+      font-size: 20.5px;
+      font-weight: bold;
+      font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
     }
   }
 
