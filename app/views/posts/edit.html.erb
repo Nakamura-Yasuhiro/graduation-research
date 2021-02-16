@@ -6,22 +6,16 @@
   <title></title>
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yasuhiro's Portfolio</title>
     <%= csrf_meta_tags %>
     
     <%= stylesheet_link_tag    'posts' %>
     <%= stylesheet_link_tag    'normalize'%>
     <%= javascript_include_tag 'posts.js' %>
 </head>
-<!-- ヘッダー部分読み込み  -->
-<%= render partial: '/template/header' %>
-     <!-- -->
+
      <div class="wrapper2">
 <div class="main posts-new">
   <div class="container">
-           <div class="ghost-on">
-    <img src="/assets/ghost.png" class="ghost">
-     </div>
     <h1 class="form-heading">編集する</h1>
     <%= form_tag("/posts/#{@post.id}/update") do %>
       <div class="form">
