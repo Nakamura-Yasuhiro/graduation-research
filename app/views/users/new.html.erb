@@ -19,12 +19,6 @@
     <div class="form-heading">ユーザー登録</div>
   </div>
     <div class="form users-form">
-      <div class="form-body">
-        <% @user.errors.full_messages.each do |message| %>
-          <div class="form-error">
-            <%= message %>
-          </div>
-        <% end %>
         <%= form_tag("/users/create",class: "box") do %>
 
           <div class="field">

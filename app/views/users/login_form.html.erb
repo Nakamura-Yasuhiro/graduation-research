@@ -15,18 +15,9 @@
 <div class="wrapper">
   <div class="main user-new">
     <div class="container">
-     <div class="ghost-on">
-    <img src="/assets/ghost.png" class="ghost">
-     </div>
         <div class="form-heading">ログイン</div>
   </div>
     <div class="form users-form">
-      <div class="form-body">
-        <% if @error_message %>
-          <div class="form-error">
-            <%= @error_message %>
-          </div>
-        <% end %>
         <%= form_tag("/login",class: "box") do %>
           <p>メールアドレス</p>
             <input name="email" value="<%= @email %>">

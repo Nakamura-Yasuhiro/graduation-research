@@ -207,7 +207,7 @@
   text-align: center;
   font-family: serif;
   list-style: none;
-  font-size: 20px;
+  font-size: 20px !important;
   height:55px;
  }
  
@@ -433,7 +433,7 @@
 .form-body {
  padding: 30px;
  margin-bottom: 17rem;
- margin-top: 15rem;
+ margin-top: 8rem;
 }
 .form-error {
  color: #ff4d75;
@@ -581,15 +581,17 @@ body {
     z-index: 1;
 
     ul{
-    margin-top: 12rem;
     list-style: none;
     text-align: center;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 3.5rem;
     }
     a{
       text-decoration: none;
       color: black;
-      font-size: 20.5px;
+      font-size: 20.5px !important;
       font-weight: bold;
       font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
     }

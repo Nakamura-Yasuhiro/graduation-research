@@ -4,7 +4,6 @@ html, body {
   z-index: -1;
   margin: 0;
   background-image: url("silver.png");
-  overflow: scroll;
 }
 
 div.body_dottedline {
@@ -339,6 +338,13 @@ div.body_dottedline {
   max-width: 780px;
     margin: auto !important;
 }
+
+.form-body {
+  padding: 30px;
+  margin-bottom: 17rem;
+  margin-top: 14rem !important;
+ }
+
 
 
 .sidebar__item--fixed a {
