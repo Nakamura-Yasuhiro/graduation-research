@@ -9,7 +9,9 @@
     <%= javascript_pack_tag 'hello_react' %>
      <%= stylesheet_link_tag    'videos' %>
 </head>
-
+<nav class="navbar fixed-top navbar-dark bg-info">
+  <a class="navbar-brand" href="#!">Enginner Tube</a>
+</nav>
 <body>
 
 <div class="enginner-bg-<%= current_user.bg_color_id %>">
@@ -60,25 +62,25 @@
   <div class="form-group">
 
     <!-- ここから編集する -->
-    <%= form.text_field :title, placeholder: "タイトル", class: "title" %>
+    <%= form.text_field :title, placeholder: "タイトル", class: "form-control" %>
     <!-- ここまで編集する -->
 
   </div>
   <div class="form-group">
 
     <!-- ここから編集する -->
-    <%= form.text_area :body, placeholder: "動画の説明", class: "sentence" %>
+    <%= form.text_area :body, placeholder: "動画の説明", class: "form-control form-control-lg" %>
     <!-- ここまで編集する -->
 
   </div>
   <div class="form-group">
 
     <!-- ここから編集する -->
-    <%= form.file_field :video %>
+    <%= form.file_field :video,class: 'btn btn-secondary' %>
     <!-- ここまで編集する -->
 
   </div>
-  <%= form.submit value="新規登録"%>
+  <%= form.submit "新規登録", class: 'btn btn-primary' %>
 <% end %>
 
 

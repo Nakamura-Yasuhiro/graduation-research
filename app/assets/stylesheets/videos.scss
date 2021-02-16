@@ -1,8 +1,13 @@
 // Place all the styles related to the videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
 html{
   background-color: #f4f4f4 !important;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
 }
 .main{
 	margin-top: 1rem;
@@ -159,7 +164,9 @@ height: 3rem;
 
 
 .title1{
-  color: azure !important;
+  color: black !important;
+  text-shadow: 1px 1px #fff !important;
+  margin-top: 1.5rem;
 }
 
 h1 {
@@ -174,5 +181,5 @@ h1 {
 }
 
 .body-sentence {
-  margin-top: -17px;
+  margin-top: -5px;
 }
