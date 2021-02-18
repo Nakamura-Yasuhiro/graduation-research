@@ -2,11 +2,12 @@
 <head>
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yasuhiro's Portfolio</title>
+  <title>Enginner-meets</title>
     <%= csrf_meta_tags %>
     
     <%= stylesheet_link_tag    'users' %>
     <%= stylesheet_link_tag    'normalize'%>
+    <%= stylesheet_link_tag    'back'%>
     <%= javascript_include_tag 'users.js' %>
 </head>
 <body>
@@ -46,4 +47,5 @@
     </div>
   </div>
 </body>
+    <%= link_to 'ひとつ前に戻る', :back %>
 </html>

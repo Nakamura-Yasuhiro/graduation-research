@@ -8,6 +8,10 @@ html{
   color: white;
 }
 
+a{
+  text-decoration: none;
+}
+
 p{
   color: white;
 }
@@ -101,7 +105,8 @@ background: #2ecc71;
 .posts-index-item{
   background-color: white;
   margin-bottom: 10px;
-  margin-right: 10rem;
+  height: 10rem;
+  margin-right: 17rem;
   border-radius: 30px;
 
 img{
@@ -123,7 +128,12 @@ img{
 .enginner-bg-1 {
   margin-top: 0;
 }
-
+.post-right{
+  margin-left: 1.5rem;
+}
+.sent{
+  margin-left: 4rem;
+}
 
 #user{
   margin-top: 10px;

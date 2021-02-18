@@ -26,6 +26,7 @@ Rails.application.config.assets.precompile += %w( videos.scss )
 Rails.application.config.assets.precompile += %w( normalize.scss )
 Rails.application.config.assets.precompile += %w( home.scss )
 Rails.application.config.assets.precompile += %w( tasks.scss )
+Rails.application.config.assets.precompile += %w( back.scss )
 
 
 

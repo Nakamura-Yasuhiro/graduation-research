@@ -131,6 +131,11 @@ img{
   white-space: nowrap;
 }
 
+.v-card__subtitle, .v-card__text {
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+
 
 @media screen and (max-width: 768px) {
   .enginner-down{
