@@ -1,3 +1,5 @@
+//= require bootstrap-sprockets
+
 $(function () {
 	$(document).on('click', '#comment_button', function () {
 		var comment = $("#comment_text").val();

@@ -1,4 +1,4 @@
-FROM ruby:2.6
+FROM ruby:2.7
 
 # `apt-get install yarn`とするとエラーになる
 # プロジェクトに必要なツールをインストール

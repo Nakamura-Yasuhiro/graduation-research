@@ -16,7 +16,7 @@
 //= require jquery_ujs 
 //= require serviceworker-companion
 //= stub flash_window
-//= require bootstrap-sprockets
+
 
 $(function () {
     $(".flash:not(:animated)").fadeIn("slow", function () {
