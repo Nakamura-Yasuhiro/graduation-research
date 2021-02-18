@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enginner-meets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'top' %>
+    <%= stylesheet_link_tag    'home' %>
+</head>
+<body>
+<div class="enginner-bg-<%=1%>">
+  <div class="body_dottedline">
+  <div class="body_">
+                  <div class="header-nav-container">
+                      <nav class="header-nav">
+                          <ul>
+                                <li class="main-menu">                          
+                                  <%= link_to "トップページ","/top" %>
+                                </li>
+                                <li class="main-menu">
+                                  <%= link_to "チャットルーム", "/posts/index" %>                                                                     
+                                </li>
+                                <li class="main-menu">                                              
+                                  <%= link_to "動画一覧", "/videos" %>
+                                </li>
+                                <li class="main-menu">
+                                  <%= link_to "新規登録", 'signup' %>
+                                </li>
+                                <li class="main-menu">
+                                  <%= link_to "設定", "/tasks/configuration" %>
+                                </li>
+                          </ul>
+                      </nav>
+                  </div>
+  
+              <div class="header-article-sp">
+                  <div class="header-container">
+                      <div class="menu-open-button">
+                          <div class="menu-trigger">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                      </div>
+                      
+                  </div>
+<div class="container-">
+  <main class="main">
+    <!-- メインコンテンツ -->
+      <h1>enginner meets</h1>
+<div class="enginner-top">
+</nav>
+  <p>Enginner meets</p>
+  <p class="keyword">最もインテリジェントな、SNS</p>
+    </div>
+<ul class ="item-ul">
+<div class="items">
+	<!-- item -->
+	<div class="item">
+		<%= image_tag 'chat.jpg' %>
+	</div>
+	<!-- item -->
+	<div class="item">
+		<%= image_tag 'video2.jpg' %>
+	</div>
+	<!-- item -->
+	<div class="item">
+  		<%= image_tag 'chat2.jpg' %>
+	</div>
+	<!-- item -->
+	<div class="item">
+		<%= image_tag 'video.jpg' %>
+	</div>
+	<!-- item -->
+	
+</div>
+</ul>
+<div class="enginner-down">
+  <div class="section_title"><p>enginner meetsを選ぶ理由</p></div>
+</div>
+<div class="document-section">
+  <p>常に最先端を行く</p>
+</div>
+  </main>
+  <div class="sidebar-bg-1">
+    <div class="sidebar__item">
+      <!-- 中身 -->
+    </div>
+    <div class="sidebar__item sidebar__item--fixed">
+  <ul>
+    <% if @current_user %>
+            <li>
+           <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            </li>
+             <li><%= link_to "トップ","top" %></li>     
+            <li font-size:11px;><%= link_to("プロフィール","/users/#{@current_user.id}/edit",{class:"file"}) %></li>
+            <li><%= link_to("ログアウト", "/logout", {method: :post}) %></li>          
+          <li><%= link_to("チャットルーム", "/posts/index") %></li>
+           <li><%= link_to("動画一覧", "/videos") %></li>
+           <li><%= link_to("設定", "/tasks/configuration") %></li>
+             <% else %>
+            <li><%= link_to("新規登録", "/signup") %></li>
+            <li><%= link_to("ログイン", "/login") %></li>
+            <li><%= link_to("簡単ログイン", "/guest_login") %></li>
+             <% end %>
+  </ul>
+      <!-- 固定・追従させたいエリア -->
+    </div>
+  </div>
+</div>
+
+
+</div>
+</body>
+</html>
