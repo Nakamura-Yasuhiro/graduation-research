@@ -7,6 +7,7 @@ Docker<br>
 circleci<br>
 Heroku(Dockerコンテナでの運用)
 
+Slim<br>
 Bootstrap<br>
 jquery<br>
 Vue.js<br>

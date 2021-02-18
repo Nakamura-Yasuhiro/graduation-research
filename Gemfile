@@ -78,3 +78,6 @@ gem 'rails_12factor', group: :production
 gem 'mini_racer'
 gem 'kaminari'
 gem 'newrelic_rpm'
+
+gem 'slim-rails' 
+gem 'html2slim'

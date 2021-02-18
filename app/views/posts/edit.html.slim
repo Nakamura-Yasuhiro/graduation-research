@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    = csrf_meta_tags
+    = stylesheet_link_tag    'posts'
+    = stylesheet_link_tag    'normalize'
+    = javascript_include_tag 'posts.js'
+  .wrapper2
+    .main.posts-new
+      .container
+        h1.form-heading
+          | 編集する
+        = form_tag("/posts/#{@post.id}/update") do
+          .form
+            .form-body
+              textarea[name="content"]
+                = @post.content
+              input[type="submit" value="保存"]

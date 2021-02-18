@@ -1,0 +1,45 @@
+html
+  head
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    title
+      | Enginner-meets
+    = csrf_meta_tags
+    = stylesheet_link_tag    'users'
+    = stylesheet_link_tag    'normalize'
+    = stylesheet_link_tag    'back'
+    = javascript_include_tag 'users.js'
+  body
+    .wrapper
+      .main.user-new
+        .container
+          .form-heading
+            | ユーザー登録
+        .form.users-form
+          = form_tag("/users/create",class: "box") do
+            .field
+              p
+                | ユーザー名
+              |  <input name="name" placeholder="Username" value="
+              = @user.name
+              | "> 
+            .field
+              p
+                | メールアドレス
+              |  <input name="email" value="
+              = @user.email
+              | "> 
+            .field
+              p
+                | パスワード
+              |  <input type="password" name="password" value="
+              = @user.password
+              | "> 
+            .field
+              p
+                | コメント
+              |  <input name="comment" value="
+              = @user.comment
+              | "> 
+              input[type="submit" value="新規登録"]
+  = link_to 'ひとつ前に戻る', :back

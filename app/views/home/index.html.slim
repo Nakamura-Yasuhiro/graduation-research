@@ -1,0 +1,89 @@
+doctype html
+html
+  head
+    title
+      | Enginner-meets
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    link[href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"]
+    = stylesheet_link_tag    'top'
+    = stylesheet_link_tag    'home'
+  body
+    |  <div class="enginner-bg-
+    =1
+    | "> 
+    .body_dottedline
+      .body_
+        .header-nav-container
+          nav.header-nav
+            ul
+              li.main-menu
+                = link_to "トップページ","/top"
+              li.main-menu
+                = link_to "チャットルーム", "/posts/index"
+              li.main-menu
+                = link_to "動画一覧", "/videos"
+              li.main-menu
+                = link_to "新規登録", 'signup'
+              li.main-menu
+                = link_to "設定", "/tasks/configuration"
+        .header-article-sp
+          .header-container
+            .menu-open-button
+              .menu-trigger
+                span
+                span
+                span
+          .container-
+            main.main
+              h1
+                | enginner meets
+              .enginner-top
+                p
+                  | Enginner meets
+                p.keyword
+                  | 最もインテリジェントな、SNS
+              ul.item-ul
+
+              .items
+                .item
+                  = image_tag 'chat.jpg'
+                .item
+                  = image_tag 'video2.jpg'
+                .item
+                  = image_tag 'chat2.jpg'
+                .item
+                  = image_tag 'video.jpg'
+              .enginner-down
+                .section_title
+                  p
+                    | enginner meetsを選ぶ理由
+              .document-section
+                p
+                  | 常に最先端を行く
+            .sidebar-bg-1
+              .sidebar__item
+
+              .sidebar__item.sidebar__item--fixed
+                ul
+                  - if @current_user
+                    li
+                      = link_to(@current_user.name, "/users/#{@current_user.id}")
+                    li
+                      = link_to "トップ","top"
+                    |  <li font-size:11px;>
+                    = link_to("プロフィール","/users/#{@current_user.id}/edit",{class:"file"})
+                    li
+                      = link_to("ログアウト", "/logout", {method: :post})
+                    li
+                      = link_to("チャットルーム", "/posts/index")
+                    li
+                      = link_to("動画一覧", "/videos")
+                    li
+                      = link_to("設定", "/tasks/configuration")
+                  - else
+                    li
+                      = link_to("新規登録", "/signup")
+                    li
+                      = link_to("ログイン", "/login")
+                    li
+                      = link_to("簡単ログイン", "/guest_login")

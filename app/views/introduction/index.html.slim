@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title
+      | Yasuhiro Portfolio
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    link[href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"]
+    = stylesheet_link_tag    'introduction'
+    = stylesheet_link_tag    'normalize'
+    = javascript_include_tag 'introduction.js'
+  body
+    .wrapper
+      .profile
+        ul.clear
+          - @users.each do |user|
+            .users-index-item
+              .user-left
+                |  <img src="
+                = " /user_images/#{user.image_name} "
+                |  "> 
+              = link_to(user.name, "/users/#{user.id}")
+              .user-right
+                p
+                  = user.comment
+          = paginate @users
+    .profile2
+
+    = render partial: '/template/footer'
+    .page_top
+      a[href="#"]
+  |  　　 
+  |  　　　 
