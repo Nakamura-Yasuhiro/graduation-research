@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'top/index'
   
   
-  get 'home/index'
+  get 'home/index' => "home#index"
   root 'home#index'
   
    get 'introduction/index'
