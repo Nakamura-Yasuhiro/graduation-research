@@ -78,6 +78,14 @@ class UsersController < ApplicationController
     flash[:notice] = "ログアウトしました"
     redirect_to("/")
   end
+
+  def likes
+    # 変数@userを定義してください
+    @user = User.find_by(id: params[:id])
+    
+    # 変数@likesを定義してください
+    @likes = Like.where(user_id: @user.id)
+  end
   
   def ensure_correct_user
     if @current_user.id != params[:id].to_i

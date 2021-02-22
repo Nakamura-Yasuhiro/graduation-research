@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!-- Head -->
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enginner-meets</title>
+  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'posts' %>
+      <%= stylesheet_link_tag    'normalize'%>
+        <%= javascript_include_tag 'posts.js' %>
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />
+</head>
+
+  <div class="main posts-show">
+    <div class="container">
+      <div class="posts-show-item">
+        <div class="post-user-name"> <img src="<%= " /user_images/#{@user.image_name} " %>">
+          <%= link_to(@user.name, "/users/#{@user.id}") %>
+        </div>
+        <p>
+          <%= @post.content %>
+        </p>
+        <div class="post-time">
+          <%= @post.created_at.to_s(:datetime_jp) %>
+        </div>
+
+      <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+        <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+          <span class="far fa-thumbs-up fa-fw fa-2x faa-tada animated like-btn-unlike"></span>
+        <% end %>
+      <% else %>
+
+        <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+          <span class="far fa-thumbs-up fa-fw fa-2x like-btn"></span>
+        <% end %>
+      <% end %>
+         <%= @likes_count %>
+
+              <div class="back-logo">
+        <%= link_to 'ひとつ前に戻る', "index" %>
+      </div>
+        <% if @post.user_id == @current_user.id %>
+          <div class="post-menus">
+            <%= link_to("編集", "/posts/#{@post.id}/edit",{class: "post-menus1"})%>
+              <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post",class: "post-menus1"}) %>
+                <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
