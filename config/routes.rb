@@ -28,7 +28,6 @@ Rails.application.routes.draw do
   root 'home#index'
   
    get 'introduction/index'
-  root 'introduction#index'
 
   resources :top do
     collection do
