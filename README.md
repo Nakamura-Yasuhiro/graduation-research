@@ -2,7 +2,8 @@
 
 使用技術一覧
 
-Rails<br>
+Ruby 3.0<br>
+Rails 6.0.3.3<br>
 Docker<br>
 circleci<br>
 Heroku(Dockerコンテナでの運用)
