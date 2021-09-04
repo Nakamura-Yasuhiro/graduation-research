@@ -15,6 +15,3 @@ Vue.js<br>
 Vuetify<br>
 
 PWA化
-
-本番環境<br>
-https://enginner-meets.herokuapp.com/
